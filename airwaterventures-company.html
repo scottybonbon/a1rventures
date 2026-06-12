@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Company — Air Water Ventures</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://use.typekit.net/mpr2oie.css">
+<link href="https://fonts.googleapis.com/css2?family=Special+Gothic&family=Spline+Sans:wght@300;400;500;600&family=Spline+Sans+Mono:wght@300;400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ================================================================
+     A1R BRAND SYSTEM — derived solely from AHM260101_A1Rwater_Website_V2.fig
+     Type   : Lead 130/110 -1px (hero 188/157 -3px) · Paragraph 18/26 · Small Head mono 12/20 UPPER ls0
+     Color  : Blue #0000CC · Ink #14161F · Ink-2 #242736 · Ice #F8FDFF · White · Grey #E5E5E5
+              Red #FF0033 lives in the logo/orb artwork only — never text or UI chrome
+     Chrome : nav black 70px · buttons 41px r27 · 1px blue strokes on light, 1px white on dark
+     ================================================================ */
+  :root{
+    --blue:#0000CC; --blue-dk:#0000A3; --ink:#14161F; --ink2:#242736;
+    --ice:#F8FDFF; --white:#FFFFFF; --grey:#E5E5E5; --grey2:#EEEDEE;
+    --display:'special-gothic','Special Gothic',sans-serif; --mono:'Spline Sans Mono', monospace;
+    --hairline-dim:rgba(255,255,255,.3); --hairline-ink:rgba(20,22,31,.2);
+  }
+  *{margin:0;padding:0;box-sizing:border-box;}
+  html{scroll-behavior:smooth;}
+  body{background:var(--white);color:var(--ink);font-family:var(--display);font-weight:400;font-size:18px;line-height:26px;-webkit-font-smoothing:antialiased;}
+  a{color:inherit;text-decoration:none;}
+  ::selection{background:var(--blue);color:var(--white);}
+  img{display:block;max-width:100%;}
+  section{position:relative;}
+  .wrap{max-width:1400px;margin:0 auto;padding:0 5vw;}
+  .eyebrow, .smallhead{font-family:var(--mono);font-size:12px;line-height:20px;letter-spacing:0;text-transform:uppercase;font-weight:500;color:var(--white);}
+  .eyebrow .tick{color:inherit;}
+  .lead, .lead-caps{font-size:clamp(3rem,8.5vw,8.125rem) !important;line-height:.85 !important;letter-spacing:-.0077em !important;font-weight:400;}
+  .lead-caps{text-transform:uppercase !important;}
+  .lead{text-transform:none !important;}
+  .head-2{font-size:clamp(2rem,4.6vw,3.95rem) !important;line-height:.92 !important;letter-spacing:-.0077em !important;text-transform:none !important;}
+  .btn{font-family:var(--mono);font-size:12px;line-height:20px;letter-spacing:0;text-transform:uppercase;font-weight:500;padding:10px 20px;border-radius:27px;display:inline-block;transition:background .2s,color .2s;border:0;cursor:pointer;}
+  .btn-blue,.btn-red{background:var(--blue);color:var(--white);}
+  .btn-blue:hover,.btn-red:hover{background:var(--blue-dk);}
+  .btn-white,.btn-ice{background:var(--white);color:var(--blue);}
+  .btn-white:hover,.btn-ice:hover{background:var(--grey);}
+  .btn-line,.btn-ghost{border:1px solid var(--white);color:var(--white);padding:9px 19px;}
+  .btn-line:hover,.btn-ghost:hover{background:var(--white);color:var(--blue);}
+  nav{position:sticky;top:0;z-index:50;background:#000000;}
+  .nav-inner{display:grid;grid-template-columns:1fr auto 1fr;align-items:center;height:70px;padding:0 5vw;gap:2rem;}
+  .nav-label{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--white);white-space:nowrap;}
+  .nav-logo img{height:20px;}
+  .nav-right{display:flex;align-items:center;gap:2.2rem;justify-content:flex-end;}
+  .nav-links{display:flex;gap:2.2rem;font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;}
+  .nav-links a{color:var(--white);opacity:.85;transition:opacity .2s;}
+  .nav-links a:hover,.nav-links a:focus-visible{opacity:1;}
+  .nav-cta{font-family:var(--mono);font-size:12px;line-height:20px;letter-spacing:0;text-transform:uppercase;font-weight:500;background:var(--blue);color:var(--white);padding:10px 20px;border-radius:27px;white-space:nowrap;transition:background .2s;}
+  .nav-cta:hover,.nav-cta:focus-visible{background:var(--blue-dk);}
+  @media(max-width:1000px){.nav-label{display:none;}.nav-inner{grid-template-columns:auto 1fr;}.nav-links{display:none;}}
+  .databand{background:var(--white);color:var(--ink);}
+  .databand .wrap{padding-top:6rem;padding-bottom:6rem;}
+  .databand .eyebrow{color:var(--ink);}
+  .databand h2{font-family:var(--display);color:var(--blue);margin-top:1rem;max-width:18ch;font-size:clamp(3rem,8.5vw,8.125rem);line-height:.85;letter-spacing:-.0077em;}
+  .databand-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:3rem;}
+  .stat{border:1px solid var(--blue);background:var(--white);padding:1.4rem 1.4rem 1.5rem;}
+  .stat .num{font-family:var(--display);color:var(--blue);font-size:clamp(2.8rem,6vw,7.5rem);line-height:.9;letter-spacing:-.0077em;}
+  .stat .num span.unit{font-size:.55em;}
+  .stat .lbl{font-size:18px;line-height:26px;color:var(--blue);margin-top:2.2rem;}
+  .src{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ink);opacity:.6;margin-top:1.4rem;}
+  @media(max-width:880px){.databand-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:560px){.databand-grid{grid-template-columns:1fr;}}
+  footer{background:var(--grey);color:var(--ink);}
+  footer .wrap{padding-top:4.5rem;padding-bottom:3rem;}
+  .foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:2.5rem;}
+  .foot-grid img{height:18px;margin-bottom:1.4rem;}
+  .foot-grid h4{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ink);opacity:.55;margin-bottom:1rem;font-weight:500;}
+  .foot-grid a, .foot-grid p{display:block;font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ink);margin-bottom:.5rem;}
+  .foot-grid a:hover{color:var(--blue);}
+  .legal{margin-top:3.5rem;padding-top:1.6rem;border-top:1px solid var(--hairline-ink);font-family:var(--mono);font-size:10px;line-height:1.8;color:var(--ink);opacity:.55;max-width:72rem;}
+  .foot-bottom{display:flex;justify-content:space-between;gap:2rem;margin-top:2rem;font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ink);flex-wrap:wrap;}
+  .foot-bottom .tick{color:inherit;}
+  @media(max-width:880px){.foot-grid{grid-template-columns:1fr 1fr;}}
+  .irband{background:var(--blue);color:var(--white);overflow:hidden;position:relative;}
+  .irband .wrap{padding-top:6.5rem;padding-bottom:6.5rem;position:relative;z-index:2;}
+  .irband h2{font-family:var(--display);max-width:14ch;font-size:clamp(3rem,8.5vw,8.125rem);line-height:.85;letter-spacing:-.0077em;text-transform:uppercase;}
+  .irband p{margin-top:1.2rem;max-width:36rem;color:var(--white);}
+  .ir-orb, .ir-orb-img{position:absolute;right:-90px;top:50%;transform:translateY(-50%);width:420px;z-index:1;}
+  .hero-ctas{display:flex;gap:1rem;margin-top:2.2rem;flex-wrap:wrap;}
+  .skyband{position:relative;min-height:52vh;display:flex;align-items:flex-start;background-size:cover;background-position:center;}
+  .skyband .wrap{position:relative;z-index:2;width:100%;padding-top:5rem;padding-bottom:5rem;}
+  .skyband h2{font-family:var(--display);color:var(--white);max-width:22ch;font-size:clamp(3rem,8.5vw,8.125rem);line-height:.85;letter-spacing:-.0077em;}
+  .reveal{opacity:0;transform:translateY(18px);transition:opacity .7s ease, transform .7s ease;}
+  .reveal.in{opacity:1;transform:none;}
+  @media(prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none;}}
+  /* ---- subpages (investors / company) ---- */
+  .pagehead{background:var(--ink);color:var(--white);}
+  .pagehead.photo{background-size:cover;background-position:center;}
+  .pagehead .wrap{position:relative;z-index:2;padding-top:7rem;padding-bottom:5rem;display:grid;grid-template-columns:1.2fr .8fr;gap:4rem;align-items:end;}
+  .pagehead h1{font-family:var(--display);font-size:clamp(3.2rem,9vw,8.125rem);line-height:.85;letter-spacing:-.0077em;text-transform:uppercase;margin:1.2rem 0 1.4rem;}
+  .pagehead h1 em{font-style:normal;}
+  .pagehead p.lede{font-size:18px;line-height:26px;max-width:34rem;color:var(--ice);}
+  .pagehead-readout{display:grid;grid-template-columns:1fr;gap:1.1rem;border-left:1px solid var(--white);padding-left:2rem;font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ice);}
+  .pagehead-readout div b{display:block;color:var(--white);font-weight:500;margin-top:2px;}
+  .pagehead-readout .live{color:var(--white);}
+  @media(max-width:880px){.pagehead .wrap{grid-template-columns:1fr;}.pagehead-readout{border-left:none;padding-left:0;border-top:1px solid var(--white);padding-top:1.6rem;}}
+  .sect{background:var(--ink);color:var(--ice);}
+  .sect .wrap{padding-top:6rem;padding-bottom:6rem;}
+  .sect h2{font-family:var(--display);font-size:clamp(2rem,4.6vw,3.95rem);line-height:.92;letter-spacing:-.0077em;margin:1rem 0 .8rem;color:var(--ice);}
+  .sect .sub{color:var(--ice);max-width:44rem;}
+  .gov, .leaders{background:var(--white);color:var(--ink);}
+  .gov .eyebrow, .leaders .eyebrow{color:var(--ink);}
+  .gov h2, .leaders h2{color:var(--blue);}
+  .gov .sub, .leaders .sub{color:var(--blue);}
+  .news-list{margin-top:2.4rem;border-top:1px solid var(--white);}
+  .news-item{display:grid;grid-template-columns:140px 1fr auto;gap:2rem;align-items:baseline;padding:1.5rem 0;border-bottom:1px solid var(--white);transition:padding-left .2s;}
+  .news-item:hover{padding-left:.6rem;}
+  .news-item .date{font-family:var(--mono);font-size:12px;line-height:20px;color:var(--ice);}
+  .news-item .ttl{font-size:clamp(1.05rem,1.7vw,1.35rem);}
+  .news-item .arrow{font-family:var(--mono);color:var(--white);font-size:14px;}
+  @media(max-width:680px){.news-item{grid-template-columns:1fr;gap:.3rem;}}
+  .own-table{width:100%;border-collapse:collapse;margin-top:2.2rem;font-family:var(--mono);font-size:12px;line-height:20px;}
+  .own-table th{font-weight:500;text-transform:uppercase;font-size:11px;color:var(--ink);opacity:.6;text-align:left;padding:10px 14px;border-bottom:1px solid var(--ink);}
+  .own-table td{padding:12px 14px;border-bottom:1px solid var(--hairline-ink);}
+  .own-table td:last-child, .own-table th:last-child{text-align:right;}
+  .filings{background:var(--ink);}
+  .filings-table{width:100%;border-collapse:collapse;margin-top:2.4rem;border:1px solid var(--white);}
+  .filings-table th{font-family:var(--mono);font-size:11px;line-height:18px;font-weight:500;text-transform:uppercase;color:var(--ice);text-align:left;padding:14px 18px;border-bottom:1px solid var(--white);}
+  .filings-table td{font-size:.92rem;padding:16px 18px;border-bottom:1px solid var(--hairline-dim);vertical-align:top;}
+  .filings-table tr:last-child td{border-bottom:none;}
+  .filings-table .form{font-family:var(--mono);font-size:12px;color:var(--white);white-space:nowrap;}
+  .filings-table .fdate{font-family:var(--mono);font-size:12px;color:var(--ice);white-space:nowrap;}
+  .filings-table .flink{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--white);white-space:nowrap;text-decoration:underline;text-underline-offset:3px;}
+  .filings-table .flink:hover{color:var(--grey);}
+  @media(max-width:680px){.filings-table thead{display:none;}.filings-table td{display:block;border-bottom:none;padding:6px 18px;}.filings-table tr{display:block;border-bottom:1px solid var(--hairline-dim);padding:10px 0;}}
+  .board-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-top:2.8rem;}
+  .board-cell{border:1px solid var(--blue);padding:1.6rem 1.5rem 1.8rem;}
+  .board-cell .mark{font-family:var(--display);font-size:1.9rem;line-height:1;color:var(--blue);}
+  .board-cell h3{font-family:var(--display);font-size:1.05rem;margin:1rem 0 .1rem;}
+  .board-cell .role{font-family:var(--mono);font-size:11px;line-height:18px;text-transform:uppercase;color:var(--blue);}
+  @media(max-width:1000px){.board-grid{grid-template-columns:1fr 1fr;}}
+  @media(max-width:600px){.board-grid{grid-template-columns:1fr;}}
+  .doc-list{margin-top:2.6rem;border-top:1px solid var(--hairline-ink);}
+  .doc-item{display:grid;grid-template-columns:1fr auto;gap:2rem;align-items:baseline;padding:1.1rem 0;border-bottom:1px solid var(--hairline-ink);}
+  .doc-item .dn{font-size:1rem;}
+  .doc-item .ds{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--ink);opacity:.55;}
+  .res-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2.8rem;}
+  .res-cell{border:1px solid var(--white);padding:2.4rem 2.2rem;}
+  .res-cell .tag{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ice);}
+  .res-cell h3{font-family:var(--display);font-size:clamp(1.4rem,2.4vw,2rem);line-height:1.05;margin:.9rem 0 .8rem;color:var(--white);}
+  .res-cell p{font-size:.92rem;color:var(--ice);margin-bottom:1.6rem;}
+  @media(max-width:880px){.res-grid{grid-template-columns:1fr;}}
+  .alert-form{display:flex;gap:.8rem;margin-top:2.2rem;max-width:34rem;flex-wrap:wrap;}
+  .alert-form input{flex:1 1 240px;background:transparent;border:1px solid var(--white);color:var(--white);font-family:var(--mono);font-size:12px;line-height:20px;padding:9px 16px;border-radius:27px;outline:none;}
+  .alert-form input::placeholder{color:rgba(255,255,255,.7);text-transform:uppercase;font-size:11px;}
+  .alert-form input:focus-visible{box-shadow:0 0 0 1px var(--white) inset;}
+  .form-note{font-family:var(--mono);font-size:11px;text-transform:uppercase;color:var(--white);opacity:.7;margin-top:1rem;}
+  .contact-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:2.8rem;}
+  .contact-cell{border:1px solid var(--white);padding:2rem 2rem 2.2rem;}
+  .contact-cell h4{font-family:var(--mono);font-size:12px;line-height:20px;font-weight:500;text-transform:uppercase;color:var(--ice);margin-bottom:.9rem;}
+  .contact-cell p, .contact-cell a{display:block;font-size:.95rem;color:var(--white);}
+  .contact-cell a:hover{color:var(--grey);}
+  .contact-cell .muted{color:var(--ice);font-size:.85rem;opacity:.8;}
+  @media(max-width:880px){.contact-grid{grid-template-columns:1fr;}}
+  .mission-grid{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:2.6rem;}
+  .mission-cell{background:var(--white);border:1px solid var(--blue);padding:2.2rem 2rem 2.4rem;}
+  .mission-cell .tag{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--blue);}
+  .mission-cell h3{font-family:var(--display);font-size:1.6rem;line-height:1.05;margin:1rem 0 .8rem;color:var(--blue);text-transform:none;}
+  .mission-cell p{font-size:18px;line-height:26px;color:var(--blue);}
+  @media(max-width:880px){.mission-grid{grid-template-columns:1fr;}}
+  .timeline{margin-top:2.8rem;border-left:1px solid var(--white);}
+  .t-item{position:relative;padding:0 0 2.4rem 2.4rem;}
+  .t-item:last-child{padding-bottom:0;}
+  .t-item::before{content:"";position:absolute;left:-4px;top:.5em;width:7px;height:7px;border-radius:50%;background:var(--white);}
+  .t-item .td{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ice);}
+  .t-item h3{font-family:var(--display);font-size:1.5rem;line-height:1.05;margin:.4rem 0 .4rem;color:var(--white);}
+  .t-item p{font-size:.95rem;color:var(--ice);max-width:40rem;}
+  .lead-row{display:grid;grid-template-columns:200px 1fr;gap:2.5rem;padding:2.6rem 0;border-bottom:1px solid var(--hairline-ink);}
+  .lead-row:last-child{border-bottom:none;}
+  .lead-row .duo{width:100%;max-width:200px;aspect-ratio:1;object-fit:cover;display:block;border:1px solid var(--blue);}
+  .lead-row h3{font-family:var(--display);font-size:1.5rem;}
+  .lead-row .role{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--blue);margin:.2rem 0 1rem;}
+  .lead-row p{font-size:18px;line-height:26px;color:var(--ink);max-width:46rem;}
+  .lead-row .chips{margin-top:1.1rem;display:flex;gap:.6rem;flex-wrap:wrap;}
+  .lead-row .chip{font-family:var(--mono);font-size:11px;line-height:18px;text-transform:uppercase;border:1px solid var(--blue);color:var(--blue);padding:4px 12px;border-radius:27px;}
+  @media(max-width:680px){.lead-row{grid-template-columns:1fr;gap:1.2rem;}}
+  .board{background:var(--ink);color:var(--ice);}
+  .board .board-cell{border-color:var(--white);}
+  .board .board-cell .mark{color:var(--white);}
+  .board .board-cell h3{color:var(--white);}
+  .board .board-cell .role{color:var(--ice);}
+  .track{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:2.6rem;}
+  .track div{border:1px solid var(--white);padding:1.5rem 1.5rem 1.7rem;}
+  .track b{font-family:var(--display);font-size:1.35rem;display:block;color:var(--white);}
+  .track span{font-family:var(--mono);font-size:11px;line-height:18px;text-transform:uppercase;color:var(--ice);display:block;margin-top:.5rem;}
+  @media(max-width:880px){.track{grid-template-columns:1fr;}}
+  /* pull-quote — treatment + copy from a1rwater.com/impact */
+  .quoteband{background:#000000;color:#FF0033;}
+  .quoteband .wrap{padding-top:6.5rem;padding-bottom:6.5rem;}
+  .quoteband blockquote{font-family:var(--display);font-size:clamp(2.2rem,5.4vw,4.8rem);line-height:1;letter-spacing:-.0077em;max-width:22ch;border:none;}
+  .quoteband cite{display:block;font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;font-style:normal;color:var(--white);margin-top:1.8rem;}
+</style>
+</head>
+<body>
+<!-- nav -->
+<nav>
+  <div class="nav-inner">
+    <span class="nav-label">[ Pure water born from air ]</span>
+    <a class="nav-logo" href="airwaterventures-corporate-home.html" aria-label="Air Water Ventures home"><img src="https://a1rwater.com/wp-content/uploads/2026/03/airwater-logo-h-white.svg" alt="A1R water"></a>
+    <div class="nav-right">
+      <div class="nav-links">
+        <a href="airwaterventures-company.html">Company</a>
+        <a href="airwaterventures-corporate-home.html#technology">Technology</a>
+        <a href="airwaterventures-corporate-home.html#partners">Partners</a>
+        <a href="airwaterventures-corporate-home.html#news">News</a>
+      </div>
+      <a class="nav-cta" href="airwaterventures-investors.html">Investor Relations</a>
+    </div>
+  </div>
+</nav>
+<!-- page head -->
+<section class="pagehead photo" id="top" style="background-image:url('assets/splash.jpg');background-position:center 30%;">
+  <div class="wrap">
+    <div>
+      <p class="eyebrow"><span class="tick">[</span> THE COMPANY <span class="tick">]</span></p>
+      <h1>We build<br><em>the source.</em></h1>
+      <p class="lede">Air Water Ventures is the company behind A1R — atmospheric water systems, a premium beverage brand, and a deployment model built to put the source wherever water is needed.</p>
+    </div>
+    
+  </div>
+</section>
+<!-- mission / vision -->
+<section class="databand" id="mission">
+  <div class="wrap reveal">
+    <p class="eyebrow"><span class="tick">[</span> MISSION + VISION <span class="tick">]</span></p>
+    <h2 class="lead">Water shouldn't depend on extraction.</h2>
+    <div class="mission-grid">
+      <div class="mission-cell">
+        <div class="tag">Mission</div>
+        <h3>Make water, on-site.</h3>
+        <p>Convert atmospheric humidity into premium drinking water — produced where it's consumed, with no groundwater extraction, no impact on freshwater aquifers, and no single-use plastic required.</p>
+      </div>
+      <div class="mission-cell">
+        <div class="tag">Vision</div>
+        <h3>The next source of water.</h3>
+        <p>Water demand is climbing as reliable supply becomes less certain. The next decade will be defined by resilience &mdash; and by water made closer to where it's consumed.</p>
+      </div>
+    </div>
+    <p class="src" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:#69696B;margin-top:1.4rem;">A projected 40% global freshwater supply shortfall by 2035 · Source: investor presentation, June 2026 (WEF-sourced).</p>
+  </div>
+</section>
+<!-- story -->
+<section class="sect" id="story">
+  <div class="wrap reveal">
+    <p class="eyebrow"><span class="tick">[</span> THE STORY <span class="tick">]</span></p>
+    <h2 class="head-2">From sky to shelf.</h2>
+    <p class="sub">A1R was built in South Florida — proving the technology in one of the world's most demanding venues markets, then scaling it into bottling infrastructure.</p>
+    <div class="timeline">
+      <div class="t-item">
+        <div class="td">Origin</div>
+        <h3>The machine works.</h3>
+        <p>Proprietary air-to-water systems — the Alpha Airflow platform — engineered to operate from 20–43°C and 25–100% humidity on any simple power source, with real-time water-quality data and remote diagnostics.</p>
+      </div>
+      <div class="t-item">
+        <div class="td">Hialeah, FL</div>
+        <h3>The facility scales.</h3>
+        <p>A South Florida bottling facility with 100,000+ liters per day of capacity — still and sparkling, in aluminum and glass. A second facility is planned for 2027.</p>
+      </div>
+      <div class="t-item">
+        <div class="td">Miami</div>
+        <h3>The venues sign.</h3>
+        <p>A1R becomes the Official Water of the Miami HEAT and Inter Miami CF — the first air-to-water partnerships in the NBA and MLS.</p>
+      </div>
+      <div class="t-item">
+        <div class="td">Distribution</div>
+        <h3>The network arrives.</h3>
+        <p>Southern Glazer's Wine &amp; Spirits — North America's largest distributor of wine, spirits, and non-alcoholic beverages — takes its first-ever equity stake in a beverage supplier and signs a national distribution agreement.</p>
+      </div>
+      <div class="t-item">
+        <div class="td">2026</div>
+        <h3>The company goes public.</h3>
+        <p>Air Water Ventures announces a business combination with Inflection Point Acquisition Corp. III at a $200M pre-money equity value, with a $96.0M PIPE — and a listing path to Nasdaq.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- pull-quote (a1rwater.com/impact) -->
+<section class="quoteband" aria-label="Quote">
+  <div class="wrap reveal">
+    <blockquote>&ldquo;Water stress is the biggest crisis no one is talking about.&rdquo;
+      <cite>Dr. Andrew Steer &mdash; World Resources Institute</cite>
+    </blockquote>
+  </div>
+</section>
+<!-- leadership -->
+<section class="sect leaders" id="leadership">
+  <div class="wrap reveal">
+    <p class="eyebrow"><span class="tick">[</span> OPERATORS, NOT TOURISTS <span class="tick">]</span></p>
+    <h2 class="lead">Built by people who've scaled beverage the right way.</h2>
+    <p class="sub">While at Diageo and Bacardi, Pete and Ryan played a major role in designing and executing the strategy of disruptive premium brands such as Red Bull and Patrón.</p>
+    <div style="margin-top:1.5rem;">
+      <div class="lead-row">
+        <div><img class="duo" src="assets/carr.jpg" alt="Pete Carr, Chief Executive Officer" loading="lazy"></div>
+        <div>
+          <h3>Pete Carr</h3>
+          <div class="role">Chief Executive Officer</div>
+          <p>35 years of cross-functional and diverse geographical experience in consumer-packaged goods and manufacturing businesses — with leadership roles across Bacardi, Diageo, Glazer's, and Red Bull.</p>
+          <div class="chips"><span class="chip">Bacardi</span><span class="chip">Diageo</span><span class="chip">Glazer's</span><span class="chip">Red Bull</span></div>
+        </div>
+      </div>
+      <div class="lead-row">
+        <div><img class="duo" src="assets/bibbo.jpg" alt="Ryan Bibbo, Chief Operating Officer" loading="lazy"></div>
+        <div>
+          <h3>Ryan Bibbo</h3>
+          <div class="role">Chief Operating Officer</div>
+          <p>25 years as a senior executive with extensive international experience across business operations and organizational management. Prior leadership across Bacardi, Glazer's, and Diageo.</p>
+          <div class="chips"><span class="chip">Bacardi</span><span class="chip">Glazer's</span><span class="chip">Diageo</span></div>
+        </div>
+      </div>
+      <div class="lead-row">
+        <div><img class="duo" src="assets/tuerff.jpg" alt="David Tuerff, Chief Financial Officer" loading="lazy"></div>
+        <div>
+          <h3>David Tuerff</h3>
+          <div class="role">Chief Financial Officer</div>
+          <p>15 years of experience overseeing finance, treasury, and investor relations at public companies, including Aris Water and GE — with deep capital markets experience across IPOs, M&amp;A, and more than $3B of financing.</p>
+          <div class="chips"><span class="chip">Aris Water</span><span class="chip">GE</span><span class="chip">$3B+ Financing</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+<!-- board -->
+<section class="sect board" id="board">
+  <div class="wrap reveal">
+    <p class="eyebrow"><span class="tick">[</span> THE BOARD <span class="tick">]</span></p>
+    <h2 class="head-2">Experience at the table.</h2>
+    <p class="sub">Industry depth across beverage, consumer, and capital markets — anchored by Inflection Point and Southern Glazer's.</p>
+    <div class="board-grid">
+      <div class="board-cell"><div class="mark">PC</div><h3>Pete Carr</h3><div class="role">Chief Executive Officer, Air Water</div></div>
+      <div class="board-cell"><div class="mark">MB</div><h3>Mike Blitzer</h3><div class="role">Founding Partner, Inflection Point</div></div>
+      <div class="board-cell"><div class="mark">KS</div><h3>Kevin Shannon</h3><div class="role">Founding Partner, Inflection Point</div></div>
+      <div class="board-cell"><div class="mark">AM</div><h3>Andrea Mollica</h3><div class="role">General Partner, Tau Capital</div></div>
+      <div class="board-cell"><div class="mark">JT</div><h3>Jennifer Chaplin Tolkin</h3><div class="role">EVP, Managing Director, Campari</div></div>
+      <div class="board-cell"><div class="mark">PM</div><h3>Peter McDonough</h3><div class="role">Founder, McDonough Advisory — P&amp;G, Diageo, Gillette</div></div>
+      <div class="board-cell"><div class="mark">MH</div><h3>Matthew Hurn</h3><div class="role">Executive Director, Mubadala</div></div>
+    </div>
+    <div class="track">
+      <div><b>Intuitive Machines</b><span>Inflection Point de-SPAC — Feb 2023</span></div>
+      <div><b>USA Rare Earth</b><span>Inflection Point de-SPAC — Mar 2025</span></div>
+      <div><b>Merlin</b><span>Inflection Point de-SPAC — Mar 2026</span></div>
+    </div>
+    <p class="src" style="font-family:var(--mono);font-size:9.5px;letter-spacing:.08em;color:#69696B;margin-top:1.4rem;">Inflection Point track record per investor presentation, June 2026 (FactSet, 4/17/2026).</p>
+  </div>
+</section>
+<!-- contact -->
+<section class="sect" id="contact">
+  <div class="wrap reveal">
+    <p class="eyebrow"><span class="tick">[</span> CONTACT <span class="tick">]</span></p>
+    <h2 class="head-2">Find us at the source.</h2>
+    <div class="contact-grid">
+      <div class="contact-cell">
+        <h4>Headquarters</h4>
+        <p>4341 W. 108th St., Suite 1<br>Hialeah, FL 33018</p>
+        <a href="tel:+13059394922" class="muted">+1-305-939-4922</a>
+      </div>
+      <div class="contact-cell">
+        <h4>General + media</h4>
+        <a href="mailto:info@a1rwater.com">info@a1rwater.com</a>
+        <a href="https://www.linkedin.com/company/a1rwater/" class="muted">LinkedIn — /company/a1rwater</a>
+      </div>
+      <div class="contact-cell">
+        <h4>The brand</h4>
+        <a href="https://a1rwater.com">a1rwater.com ↗</a>
+        <p class="muted">A1R — still + sparkling, born from air.</p>
+      </div>
+    </div>
+  </div>
+</section>
+<section class="skyband" style="background-image:url('assets/clouds-bright.jpg');" aria-label="Brand statement"><div class="wrap"><h2 class="lead">The world's first water sourced from the sky.</h2></div></section>
+<!-- IR band -->
+<section class="irband" id="investors">
+  <img class="ir-orb-img" src="assets/orb.png" alt="" aria-hidden="true">
+  <div class="wrap reveal">
+    <p class="eyebrow"><span class="tick">[</span> INVESTOR RELATIONS <span class="tick">]</span></p>
+    <h2 class="lead-caps">Own what's next.</h2>
+    <p>Transaction details, filings, governance, and email alerts.</p>
+    <div class="hero-ctas">
+      <a class="btn btn-ice" href="airwaterventures-investors.html">Enter Investor Relations</a>
+    </div>
+  </div>
+</section>
+<!-- footer -->
+<footer>
+  <div class="wrap">
+    <div class="foot-grid">
+      <div>
+        <a href="airwaterventures-corporate-home.html"><img src="https://a1rwater.com/wp-content/uploads/2026/03/airwater-logo-h-black.svg" alt="A1R water" style="height:20px;display:block;margin-bottom:1.2rem;"></a>
+        <p style="margin-top:1rem;">4341 W. 108th St., Suite 1<br>Hialeah, FL 33018</p>
+        <p>info@a1rwater.com</p>
+      </div>
+      <div>
+        <h4>Company</h4>
+        <a href="#mission">Mission + vision</a>
+        <a href="#story">The story</a>
+        <a href="#leadership">Leadership</a>
+        <a href="#board">Board</a>
+      </div>
+      <div>
+        <h4>Investors</h4>
+        <a href="airwaterventures-investors.html">Overview</a>
+        <a href="airwaterventures-investors.html#filings">SEC filings</a>
+        <a href="airwaterventures-investors.html#governance">Governance</a>
+        <a href="airwaterventures-investors.html#alerts">Email alerts</a>
+      </div>
+      <div>
+        <h4>Connect</h4>
+        <a href="https://www.linkedin.com/company/a1rwater/">LinkedIn</a>
+        <a href="mailto:info@a1rwater.com">Media inquiries</a>
+        <a href="https://a1rwater.com">a1rwater.com ↗</a>
+      </div>
+    </div>
+    <p class="legal">FORWARD-LOOKING STATEMENTS — Certain statements on this site are forward-looking and involve risks and uncertainties. Actual results may differ materially. Investors should review the registration statement and other documents filed with the SEC, available at sec.gov, which contain important information about Air Water Ventures, Inflection Point Acquisition Corp. III, and the proposed business combination. Market data sourced from third-party industry publications; the company has not independently verified such data. [PROTOTYPE — COPY SUBJECT TO LEGAL REVIEW]</p>
+    <div class="foot-bottom">
+      <span>© 2026 AIR WATER VENTURES</span>
+      <span>[ PURE WATER BORN FROM AIR ]</span>
+      <span>TERMS · PRIVACY</span>
+    </div>
+  </div>
+</footer>
+<script>
+  const io = new IntersectionObserver((entries)=>{
+    entries.forEach(e=>{ if(e.isIntersecting){ e.target.classList.add('in'); io.unobserve(e.target);} });
+  },{threshold:.12});
+  document.querySelectorAll('.reveal').forEach(el=>io.observe(el));
+</script>
+</body>
+</html>

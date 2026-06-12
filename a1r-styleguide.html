@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>A1Rwater Brand Style Guide</title>
+<link rel="stylesheet" href="a1r-brand.css">
+<style>
+  .swatches { display:flex; flex-wrap:wrap; gap:15px; }
+  .swatch { width:160px; border:1px solid var(--grey); border-radius:8px; overflow:hidden; }
+  .swatch .chip { height:90px; }
+  .swatch .meta { padding:10px; font-family:var(--font-mono); font-size:12px; }
+  .block { padding:60px 0; border-bottom:1px solid var(--grey); }
+  .label { font-family:var(--font-mono); font-size:12px; text-transform:uppercase; color:var(--charcoal); margin-bottom:20px; }
+  .type-row { margin-bottom:30px; }
+  table { border-collapse:collapse; font-size:15px; }
+  td, th { border:1px solid var(--grey); padding:8px 14px; text-align:left; font-family:var(--font-mono); font-size:13px; }
+  .demo-sections > div { padding:40px; margin-bottom:10px; }
+</style>
+</head>
+<body>
+<div class="container">
+
+  <div class="block">
+    <p class="eyebrow">[ a1rwater.com — extracted brand system ]</p>
+    <h2 style="color:var(--blue)">Brand Style Guide</h2>
+  </div>
+
+  <div class="block">
+    <p class="label">Colors</p>
+    <div class="swatches">
+      <div class="swatch"><div class="chip" style="background:#0000CC"></div><div class="meta">Blue (Primary)<br>#0000CC</div></div>
+      <div class="swatch"><div class="chip" style="background:#14161F"></div><div class="meta">Black (Text)<br>#14161F</div></div>
+      <div class="swatch"><div class="chip" style="background:#FF0033"></div><div class="meta">Red (Accent)<br>#FF0033</div></div>
+      <div class="swatch"><div class="chip" style="background:#FFFFFF"></div><div class="meta">White<br>#FFFFFF</div></div>
+      <div class="swatch"><div class="chip" style="background:#E5E5E5"></div><div class="meta">Grey<br>#E5E5E5</div></div>
+      <div class="swatch"><div class="chip" style="background:#69696B"></div><div class="meta">Charcoal<br>#69696B</div></div>
+      <div class="swatch"><div class="chip" style="background:#FFBC7D"></div><div class="meta">Peach (transition)<br>#FFBC7D</div></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="label">Typography</p>
+    <div class="type-row">
+      <p class="label">H1 / Hero — Special Gothic 400, 180/155, uppercase</p>
+      <h1 style="color:var(--blue)">It's in the air.</h1>
+    </div>
+    <div class="type-row">
+      <p class="label">H2 / Display — Special Gothic 500, 130/110, -1.5px</p>
+      <h2 style="color:var(--blue)">Crack open the future.</h2>
+    </div>
+    <div class="type-row">
+      <p class="label">Body — Special Gothic 400, 18/26</p>
+      <p style="max-width:560px">We make atmospheric water. Sourced from the sky. Built for the real world. Crisp still and sparkling with a light mineral finish.</p>
+    </div>
+    <div class="type-row">
+      <p class="label">Eyebrow / labels — Spline Sans Mono 500</p>
+      <p class="eyebrow">[ pure innovation + infinite possibilities ]</p>
+    </div>
+    <div class="type-row">
+      <p class="label">Secondary — Spline Sans 400</p>
+      <p style="font-family:var(--font-secondary)">Used as the secondary typeface for supporting copy.</p>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="label">Serif / Editorial typography — Merriweather (variable, optical sizing) · from Figma IR styles</p>
+    <div style="background:var(--blue); padding:40px; margin-bottom:30px;">
+      <p class="serif-display" style="color:var(--white); margin:0">Air Water Ventures</p>
+    </div>
+    <div class="type-row"><p class="label">Page Title — 48/60</p><p class="serif-page-title">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p></div>
+    <div class="type-row"><p class="label">Heading 1 — 38/48</p><p class="serif-h1">Lorem ipsum dolor sit amet, consectetuer adipiscing elit.</p></div>
+    <div class="type-row"><p class="label">Heading 2 — 28/36</p><p class="serif-h2">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p></div>
+    <div class="type-row"><p class="label">Heading 3 — 25/32</p><p class="serif-h3">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo.</p></div>
+    <div class="type-row"><p class="label">Heading 4 — 21/27</p><p class="serif-h4">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p></div>
+    <div class="type-row"><p class="label">Heading 5 — 20/26</p><p class="serif-h5">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p></div>
+    <div class="type-row"><p class="label">Heading 6 — 18/23</p><p class="serif-h6">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor.</p></div>
+    <p class="label" style="margin-top:20px">Note: sizes measured from the rendered Figma prototype and rounded — exact tokens available once the Figma file is shared with scott@prefire.co.</p>
+  </div>
+
+  <div class="block">
+    <p class="label">Buttons — Spline Sans Mono 600 12px uppercase, pill radius 50px, blue fill</p>
+    <a class="btn" href="#">Join Waitlist</a>&nbsp;&nbsp;
+    <a class="btn" href="#" style="background:var(--black)">How it Works</a>&nbsp;&nbsp;
+    <a class="btn" href="#" style="background:var(--red)">Why it Matters</a>
+  </div>
+
+  <div class="block">
+    <p class="label">Section treatments</p>
+    <div class="demo-sections">
+      <div class="section-blue"><p class="eyebrow">[ blue section ]</p><p>#0000CC background, white text</p></div>
+      <div class="section-dark"><p class="eyebrow">[ dark section ]</p><p>#14161F background, white text</p></div>
+      <div class="section-grey"><p class="eyebrow">[ grey section ]</p><p>#E5E5E5 background, black text</p></div>
+    </div>
+  </div>
+
+  <div class="block">
+    <p class="label">Layout & misc</p>
+    <table>
+      <tr><th>Token</th><th>Value</th></tr>
+      <tr><td>Container max-width</td><td>1400px (1024 @ ≤1100px, 767 @ ≤800px)</td></tr>
+      <tr><td>Global padding</td><td>30px desktop / 10px mobile</td></tr>
+      <tr><td>Widget spacing</td><td>15px</td></tr>
+      <tr><td>Link color</td><td>#FF0033 (accent red)</td></tr>
+      <tr><td>Fonts</td><td>special-gothic via Adobe Typekit (kit mpr2oie); Spline Sans + Spline Sans Mono via Google Fonts</td></tr>
+      <tr><td>Logo assets</td><td>airwater-logo-h-white.svg / airwater-logo-h-black.svg (on a1rwater.com)</td></tr>
+      <tr><td>Platform</td><td>WordPress + Elementor Pro (Hello Elementor theme), kit-5</td></tr>
+    </table>
+  </div>
+
+</div>
+</body>
+</html>
