@@ -25,6 +25,7 @@
   *{margin:0;padding:0;box-sizing:border-box;}
   html{scroll-behavior:smooth;}
   body{background:var(--white);color:var(--ink);font-family:var(--display);font-weight:400;font-size:18px;line-height:26px;-webkit-font-smoothing:antialiased;}
+  h1,h2,h3,h4,h5,h6{font-weight:400;}
   a{color:inherit;text-decoration:none;}
   ::selection{background:var(--blue);color:var(--white);}
   img{display:block;max-width:100%;}
@@ -53,6 +54,15 @@
   .nav-links a:hover,.nav-links a:focus-visible{opacity:1;}
   .nav-cta{font-family:var(--mono);font-size:12px;line-height:20px;letter-spacing:0;text-transform:uppercase;font-weight:500;background:var(--blue);color:var(--white);padding:10px 20px;border-radius:27px;white-space:nowrap;transition:background .2s;}
   .nav-cta:hover,.nav-cta:focus-visible{background:var(--blue-dk);}
+  .nav-item{position:relative;}
+  .nav-item>a{display:inline-flex;align-items:center;gap:.4em;color:var(--white);opacity:.85;transition:opacity .2s;}
+  .nav-item:hover>a,.nav-item:focus-within>a{opacity:1;}
+  .nav-item .caret{font-size:9px;transition:transform .2s;}
+  .nav-item:hover .caret,.nav-item:focus-within .caret{transform:rotate(180deg);}
+  .nav-menu{position:absolute;top:100%;left:-1.1rem;min-width:240px;background:#000;border:1px solid var(--hairline-dim);padding:.5rem 0;display:flex;flex-direction:column;opacity:0;visibility:hidden;transform:translateY(6px);transition:opacity .18s,transform .18s,visibility .18s;z-index:60;}
+  .nav-item:hover .nav-menu,.nav-item:focus-within .nav-menu{opacity:1;visibility:visible;transform:translateY(0);}
+  .nav-menu a{padding:.6rem 1.4rem;white-space:nowrap;opacity:.8;transition:opacity .2s,background .2s;}
+  .nav-menu a:hover,.nav-menu a:focus-visible{opacity:1;background:rgba(255,255,255,.07);}
   @media(max-width:1000px){.nav-label{display:none;}.nav-inner{grid-template-columns:auto 1fr;}.nav-links{display:none;}}
   .databand{background:var(--white);color:var(--ink);}
   .databand .wrap{padding-top:6rem;padding-bottom:6rem;}
@@ -92,7 +102,7 @@
   /* ---- home ---- */
   .hero{min-height:92vh;display:flex;align-items:flex-end;overflow:hidden;background:var(--ink) url('assets/hero-can.jpg') center 38%/cover no-repeat;color:var(--white);}
   .hero .wrap{position:relative;z-index:2;width:100%;padding-top:18vh;padding-bottom:7vh;}
-  .hero h1{font-family:var(--display);font-size:clamp(4.2rem,12.4vw,11.75rem);line-height:.84;letter-spacing:-.0165em;text-transform:uppercase;margin:1.2rem 0 1.4rem;}
+  .hero h1{font-family:var(--display);font-weight:400;font-size:clamp(4.2rem,12.4vw,11.75rem);line-height:.84;letter-spacing:-.0165em;text-transform:uppercase;margin:1.2rem 0 1.4rem;}
   .hero p.lede{font-size:18px;line-height:26px;max-width:34rem;color:var(--ice);}
   .hero-readout{margin-top:3rem;display:flex;flex-wrap:wrap;border:1px solid var(--white);width:max-content;max-width:100%;}
   .hero-readout div{padding:.9rem 1.6rem;border-right:1px solid var(--white);font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ice);}
@@ -171,6 +181,21 @@
   .certs p.sub{color:var(--blue);max-width:38rem;margin-top:.8rem;}
   .cert-chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:2.2rem;}
   .cert-chips span{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;border:1px solid var(--blue);color:var(--blue);padding:8px 18px;border-radius:27px;}
+  /* ---- brand-architecture teaser (Drop / Ripple) ---- */
+  .archband{background:var(--ink);color:var(--ice);}
+  .archband .wrap{padding-top:7rem;padding-bottom:7rem;}
+  .archband h2{font-family:var(--display);font-weight:400;color:var(--ice);margin-top:1rem;}
+  .archband .arch-lede{color:var(--ice);max-width:46rem;margin-top:1.2rem;}
+  .arch-pair{display:grid;grid-template-columns:1fr 1fr;gap:12px;margin-top:3rem;}
+  .arch-cell{border:1px solid var(--white);padding:2.4rem 2.2rem 2.6rem;}
+  .arch-cell .tag{font-family:var(--mono);font-size:12px;line-height:20px;text-transform:uppercase;color:var(--ice);}
+  .arch-cell h3{font-family:var(--display);font-weight:400;font-size:clamp(2rem,3.4vw,2.9rem);line-height:1;margin:1rem 0 .9rem;color:var(--white);}
+  .arch-cell p{color:var(--ice);font-size:.98rem;line-height:1.55;}
+  .arch-cell.drop{background:var(--white);color:var(--ink);border:none;}
+  .arch-cell.drop .tag{color:var(--blue);}
+  .arch-cell.drop h3{color:var(--blue);}
+  .arch-cell.drop p{color:var(--ink);}
+  @media(max-width:880px){.arch-pair{grid-template-columns:1fr;}}
 </style>
 </head>
 <body>
@@ -181,10 +206,28 @@
     <a class="nav-logo" href="airwaterventures-corporate-home.html" aria-label="Air Water Ventures home"><img src="https://a1rwater.com/wp-content/uploads/2026/03/airwater-logo-h-white.svg" alt="A1R water"></a>
     <div class="nav-right">
       <div class="nav-links">
-        <a href="airwaterventures-company.html">Company</a>
-        <a href="airwaterventures-corporate-home.html#technology">Technology</a>
-        <a href="airwaterventures-corporate-home.html#partners">Partners</a>
-        <a href="#news">News</a>
+        <div class="nav-item">
+          <a href="airwaterventures-company.html" aria-haspopup="true">Company <span class="caret">▾</span></a>
+          <div class="nav-menu">
+            <a href="airwaterventures-company.html#mission">Mission &amp; Vision</a>
+            <a href="airwaterventures-company.html#values">Values</a>
+            <a href="airwaterventures-company.html#brand">The Drop &amp; The Ripple</a>
+            <a href="airwaterventures-company.html#story">Our Story</a>
+            <a href="airwaterventures-company.html#technology">Technology</a>
+            <a href="airwaterventures-company.html#geography">Geography</a>
+            <a href="airwaterventures-company.html#sustainability">Sustainability</a>
+            <a href="airwaterventures-company.html#awards">Awards &amp; Recognition</a>
+          </div>
+        </div>
+        <a href="https://a1rwater.com" target="_blank" rel="noopener">Products</a>
+        <div class="nav-item">
+          <a href="airwaterventures-company.html#leadership" aria-haspopup="true">Leadership <span class="caret">▾</span></a>
+          <div class="nav-menu">
+            <a href="airwaterventures-company.html#leadership">Executive Team</a>
+            <a href="airwaterventures-company.html#board">Board of Directors</a>
+            <a href="airwaterventures-investors.html#governance">Governance</a>
+          </div>
+        </div>
       </div>
       <a class="nav-cta" href="airwaterventures-investors.html">Investor Relations</a>
     </div>
@@ -319,6 +362,29 @@
     </div>
   </div>
 </section>
+<!-- brand architecture teaser (Drop / Ripple) -->
+<section class="archband" id="brand" aria-label="Brand architecture">
+  <div class="wrap reveal">
+    <p class="eyebrow"><span class="tick">[</span> THE DROP &amp; THE RIPPLE <span class="tick">]</span></p>
+    <h2 class="head-2">A drop makes contact. A ripple carries it further.</h2>
+    <p class="arch-lede">In physics, a ripple cannot exist without a drop. A1R Water is the drop — the product the world holds, tastes, and chooses. Air Water Ventures is the ripple — the company that turns that contact into category, capital, and lasting enterprise value.</p>
+    <div class="arch-pair">
+      <div class="arch-cell drop">
+        <div class="tag">A1R Water — The Drop</div>
+        <h3>Felt at the point of impact.</h3>
+        <p>The consumer-facing premium water brand. Bold, tactile, and immediate — built for people who demand better and want the world to know it. It lives at retail, in venues, and in culture.</p>
+      </div>
+      <div class="arch-cell">
+        <div class="tag">Air Water Ventures — The Ripple</div>
+        <h3>Measured by how far it reaches.</h3>
+        <p>The company behind the product. Operating at the level of systems, capital, and category creation — credible, structured, and built for the long arc.</p>
+      </div>
+    </div>
+    <div class="hero-ctas">
+      <a class="btn btn-line" href="airwaterventures-company.html#brand">Read the full story</a>
+    </div>
+  </div>
+</section>
 <!-- leadership -->
 <section class="leaders">
   <div class="wrap reveal">
@@ -404,34 +470,38 @@
       <div>
         <img src="https://a1rwater.com/wp-content/uploads/2026/03/airwater-logo-h-black.svg" alt="A1R water">
         <p>4341 W. 108th St., Suite 1<br>Hialeah, FL 33018</p>
-        <p>info@a1rwater.com<br>+1-305-939-4922</p>
+        <p><a href="mailto:info@a1rwater.com">info@a1rwater.com</a><br>+1-305-939-4922</p>
       </div>
       <div>
         <h4>Company</h4>
-        <a href="airwaterventures-company.html">About</a>
-        <a href="#technology">Technology</a>
-        <a href="#partners">Partners</a>
-        <a href="#news">News</a>
+        <a href="airwaterventures-company.html#mission">Mission &amp; vision</a>
+        <a href="airwaterventures-company.html#brand">The Drop &amp; The Ripple</a>
+        <a href="airwaterventures-company.html#story">Our story</a>
+        <a href="airwaterventures-company.html#technology">Technology</a>
+        <a href="airwaterventures-company.html#sustainability">Sustainability</a>
+        <a href="airwaterventures-company.html#awards">Awards &amp; recognition</a>
       </div>
       <div>
-        <h4>Investors</h4>
-        <a href="airwaterventures-investors.html">Overview</a>
+        <h4>Investors &amp; press</h4>
+        <a href="airwaterventures-investors.html">IR overview</a>
         <a href="airwaterventures-investors.html#filings">SEC filings</a>
         <a href="airwaterventures-investors.html#governance">Governance</a>
-        <a href="airwaterventures-investors.html#alerts">Email alerts</a>
+        <a href="airwaterventures-investors.html#news">Newsroom</a>
+        <a href="mailto:info@a1rwater.com?subject=Media%20inquiry">Media contact</a>
       </div>
       <div>
-        <h4>Connect</h4>
-        <a href="https://www.linkedin.com/company/a1rwater/">LinkedIn</a>
-        <a href="mailto:info@a1rwater.com">Media inquiries</a>
-        <a href="https://a1rwater.com">a1rwater.com ↗</a>
+        <h4>Products &amp; more</h4>
+        <a href="https://a1rwater.com" target="_blank" rel="noopener">A1R — bottled &amp; canned ↗</a>
+        <a href="mailto:info@a1rwater.com?subject=Careers">Careers</a>
+        <a href="https://www.linkedin.com/company/a1rwater/" target="_blank" rel="noopener">LinkedIn ↗</a>
+        <a href="https://a1rwater.com" target="_blank" rel="noopener">a1rwater.com ↗</a>
       </div>
     </div>
     <p class="legal">FORWARD-LOOKING STATEMENTS — Certain statements on this site are forward-looking and involve risks and uncertainties. Actual results may differ materially. Investors should review the registration statement and other documents filed with the SEC, available at sec.gov, which contain important information about Air Water Ventures, Inflection Point Acquisition Corp. III, and the proposed business combination. Market data sourced from third-party industry publications; the company has not independently verified such data. [PROTOTYPE — COPY SUBJECT TO LEGAL REVIEW]</p>
     <div class="foot-bottom">
       <span>© 2026 AIR WATER VENTURES</span>
       <span><span class="tick">[</span> PURE WATER BORN FROM AIR <span class="tick">]</span></span>
-      <span>TERMS · PRIVACY</span>
+      <span><a href="#">Privacy</a> · <a href="#">Terms</a> · <a href="airwaterventures-company.html#contact">Contact</a> · <a href="airwaterventures-corporate-home.html#top">Site map</a></span>
     </div>
   </div>
 </footer>
