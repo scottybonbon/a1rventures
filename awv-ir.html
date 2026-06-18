@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Investor Relations — Air Water Ventures</title>
+<title>Investor Relations · Air Water Ventures</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Instrument+Serif:ital@0;1&family=Spline+Sans:wght@300;400;500;600&family=Spline+Sans+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -13,48 +13,84 @@
 
 <nav>
   <div class="wrap nav-inner">
-    <a class="brand" href="awv-home.html" aria-label="Air Water Ventures">
-      <svg viewBox="0 0 48 56"><path d="M19 4C19 4 8 22 8 33a11 11 0 0 0 22 0C30 22 19 4 19 4Z" fill="none" stroke="#fff" stroke-width="2.2"/><path d="M32 12C32 12 23 27 23 35a9 9 0 0 0 18 0C41 27 32 12 32 12Z" fill="none" stroke="#fff" stroke-width="2.2"/></svg>
-      <span class="wm">AWV</span>
+    <a class="brand" href="index.html" aria-label="Air Water Ventures">
+      <img class="brandlogo brandlogo-d" src="logo-long.svg" alt="Air Water Ventures">
+      <img class="brandlogo brandlogo-m" src="logo-mobile.png" alt="AWV">
     </a>
     <div class="nav-links">
-      <a href="awv-company.html">Company</a>
+      <div class="nav-item">
+        <a href="awv-company.html" aria-haspopup="true">Company <span class="caret">▾</span></a>
+        <div class="nav-menu">
+          <a href="awv-company.html#mission">Mission &amp; vision</a>
+          <a href="awv-company.html#values">Our values</a>
+          <a href="awv-company.html#story">Company story</a>
+          <a href="awv-company.html#technology">Technology</a>
+          <a href="awv-company.html#geography">Geography</a>
+          <a href="awv-company.html#awards">Awards &amp; recognition</a>
+          <a href="awv-company.html#careers">Careers</a>
+        </div>
+      </div>
       <a href="https://a1rwater.com" target="_blank" rel="noopener">Products</a>
-      <a href="#news">Newsroom</a>
       <a class="nav-cta active" href="awv-ir.html">Investor Relations</a>
     </div>
+    <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">Menu</button>
   </div>
 </nav>
+<div class="mobile-drawer" id="drawer">
+  <button class="close" aria-label="Close menu">Close ✕</button>
+  <a href="awv-company.html">Company</a>
+  <a href="https://a1rwater.com" target="_blank" rel="noopener">Products</a>
+  <a href="awv-ir.html">Investor Relations</a>
+</div>
 
-<!-- hero / snapshot -->
-<header class="hero left" id="top">
+<!-- elevated IR hero with stock card -->
+<header class="hero-el hero-ir" id="top">
   <div class="wrap">
-    <p class="eyebrow">Investor Relations</p>
-    <h1>Own <span class="it">what's next.</span></h1>
-    <p class="sub">Everything the market needs — the transaction, filings, governance, and the live picture — in one place.</p>
+    <div class="hero-el-grid">
+      <div>
+        <p class="eyebrow kick">Investor Relations</p>
+        <h1 class="statement-h1">Own what's next</h1>
+      </div>
+      <div class="stockcard">
+        <span class="sym">NASDAQ: AWVE</span>
+        <div class="price">$10.00</div>
+        <div class="delta">Reference price · pre-listing</div>
+        <div class="foot">ILLUSTRATIVE · AWVE BEGINS TRADING ON NASDAQ AT CLOSE<br>$10.00 SPAC TRUST VALUE PER SHARE · ASSUMES 0% REDEMPTIONS</div>
+      </div>
+    </div>
   </div>
 </header>
 
-<section class="sec paper">
+<!-- IR sub-nav -->
+<div class="subnav">
   <div class="wrap">
-    <div class="split">
-      <div class="stockcard">
-        <span class="sym">NASDAQ: AWVE</span>
-        <div class="price">$52.02</div>
-        <div class="delta">+1.53 [4.5%]</div>
-        <div class="foot">PRICING DELAYED 20 MINUTES<br>LAST UPDATED: 06/17/2026 4:00PM ET</div>
-      </div>
-      <div class="deckcard" style="max-width:none;align-self:center;">
-        <div class="thumb"><span class="mono">INVESTOR<br>PRESENTATION</span></div>
-        <div class="meta"><div class="k">Latest presentation</div><div class="t">Q3 2026</div><a href="#resources">Download ⤓</a></div>
-      </div>
+    <span class="lbl">Investor Relations</span>
+    <a href="#stock">Overview</a>
+    <a href="#transaction">Transaction</a>
+    <a href="#financials">Financials</a>
+    <a href="#governance">Leadership &amp; Board</a>
+    <a href="#news">News &amp; Events</a>
+    <a href="#filings">SEC Filings</a>
+    <a href="#resources">Resources</a>
+    <a href="#contact">Contact</a>
+  </div>
+</div>
+
+<!-- key figures -->
+<section class="sec paper" id="stock">
+  <div class="wrap">
+    <p class="eyebrow kick">Key figures</p>
+    <div class="figrow">
+      <div><div class="fv"><span class="u">$</span>200<span class="u">M</span></div><div class="fk">Pre-money equity value</div></div>
+      <div><div class="fv"><span class="u">$</span>96.0<span class="u">M</span></div><div class="fk">Committed capital (PIPE)</div></div>
+      <div><div class="fv"><span class="u">$</span>339.5<span class="u">M</span></div><div class="fk">Pro forma enterprise value</div></div>
+      <div><div class="fv">~30<span class="u">%</span></div><div class="fk">Founder rollover ownership</div></div>
     </div>
-    <div class="cards c4">
-      <div class="card"><div class="k">Market cap</div><div class="v"><span class="u">$</span>1.2<span class="u">B</span></div></div>
-      <div class="card"><div class="k">52-wk range</div><div class="v" style="font-size:1.8rem;">$41–58</div></div>
-      <div class="card"><div class="k">Avg volume</div><div class="v">480<span class="u">K</span></div></div>
-      <div class="card"><div class="k">Listing</div><div class="v" style="font-size:1.8rem;">Nasdaq</div><div class="d">Ticker: AWVE</div></div>
+    <div class="deckcard" style="margin-top:2rem;">
+      <div class="thumb"><span class="mono">INVESTOR<br>PRESENTATION</span></div>
+      <div class="meta"><div class="k">Latest presentation</div><div class="t">June 2026</div><a href="https://a1rwater.com/wp-content/uploads/2026/06/a1rwater-investor-deck-260609.pdf" target="_blank" rel="noopener">Download ⤓</a></div>
     </div>
+    <p class="footnote-src">Pre-listing. AWVE begins trading on Nasdaq upon completion of the business combination; figures assume 0% redemptions. See disclaimers below.</p>
   </div>
 </section>
 
@@ -62,73 +98,135 @@
 <section class="sec" id="transaction">
   <div class="wrap">
     <p class="eyebrow kick">The transaction</p>
-    <h2 class="display" style="max-width:20ch;">A public company, by design.</h2>
-    <div class="cards c4">
-      <div class="card"><div class="k">Structure</div><div class="v" style="font-size:1.8rem;">de-SPAC</div><div class="d">Inflection Point III</div></div>
-      <div class="card"><div class="k">Pre-money</div><div class="v"><span class="u">$</span>200<span class="u">M</span></div></div>
-      <div class="card royal"><div class="k">PIPE</div><div class="v"><span class="u">$</span>96.0<span class="u">M</span></div><div class="d">Upsized</div></div>
-      <div class="card"><div class="k">Listing</div><div class="v" style="font-size:1.8rem;">Nasdaq</div><div class="d">Ticker: AWVE</div></div>
+    <h2 class="display" style="max-width:20ch;">A public company.</h2>
+    <p class="lede">Air Water Ventures is combining with Inflection Point Acquisition Corp. III to list on Nasdaq, anchored by Inflection Point and Southern Glazer's.</p>
+    <div class="kv">
+      <div class="r"><div class="k">Structure</div><div class="v">Business combination (de-SPAC) with Inflection Point Acquisition Corp. III</div></div>
+      <div class="r"><div class="k">Pre-money equity</div><div class="v"><b>$200.0M</b></div></div>
+      <div class="r"><div class="k">Committed capital</div><div class="v"><b>$96.0M</b> PIPE, $50.0M funded at announcement, $46.0M at close</div></div>
+      <div class="r"><div class="k">Pro forma equity value</div><div class="v"><b>$676.8M</b></div></div>
+      <div class="r"><div class="k">Pro forma cash</div><div class="v"><b>$337.3M</b> to the balance sheet</div></div>
+      <div class="r"><div class="k">Pro forma EV</div><div class="v"><b>$339.5M</b></div></div>
+      <div class="r"><div class="k">Rollover</div><div class="v">Existing shareholders roll 100% of interest and retain ~30% at close</div></div>
+      <div class="r"><div class="k">Listing</div><div class="v">Nasdaq · ticker AWVE · placement agent Cantor Fitzgerald &amp; Co.</div></div>
     </div>
+
+    <table class="dtable" style="margin-top:3rem;">
+      <caption>Illustrative ownership at close (assumes 0% redemptions)</caption>
+      <thead><tr><th>Shareholder</th><th class="num">Pro forma shares (M)</th><th class="num">Ownership</th></tr></thead>
+      <tbody>
+        <tr><td>A1R Water rollover</td><td class="num">20.0</td><td class="num">29.6%</td></tr>
+        <tr><td>Inflection Point public shareholders</td><td class="num">28.7</td><td class="num">42.3%</td></tr>
+        <tr><td>PIPE investors</td><td class="num">9.8</td><td class="num">14.4%</td></tr>
+        <tr><td>Inflection Point sponsor</td><td class="num">9.2</td><td class="num">13.7%</td></tr>
+        <tr class="total"><td>Total pro forma shares</td><td class="num">67.7</td><td class="num">100.0%</td></tr>
+      </tbody>
+    </table>
+
+    <table class="dtable" style="margin-top:2.6rem;">
+      <caption>Sources &amp; uses ($M)</caption>
+      <thead><tr><th>Sources</th><th class="num">$M</th><th>Uses</th><th class="num">$M</th></tr></thead>
+      <tbody>
+        <tr><td>A1R Water rollover equity</td><td class="num">200.0</td><td>Equity to A1R Water</td><td class="num">200.0</td></tr>
+        <tr><td>SPAC trust</td><td class="num">261.3</td><td>Cash to balance sheet</td><td class="num">337.3</td></tr>
+        <tr><td>PIPE</td><td class="num">96.0</td><td>Est. transaction expenses</td><td class="num">20.0</td></tr>
+        <tr class="total"><td>Total sources</td><td class="num">557.3</td><td>Total uses</td><td class="num">557.3</td></tr>
+      </tbody>
+    </table>
   </div>
 </section>
 
-<!-- thesis -->
-<section class="sec paper" id="thesis">
+<!-- financials -->
+<section class="sec paper" id="financials">
   <div class="wrap">
-    <p class="eyebrow kick">Why invest</p>
-    <h2 class="display">Four reasons the market should care.</h2>
-    <div class="tiles">
-      <div class="tile"><div class="n">01 — Market</div><h3>A $460B trajectory</h3><p>Bottled water heading to $460B by 2030, with air-to-water the fastest-growing segment at 16.3% CAGR — into a worsening water-scarcity backdrop.</p></div>
-      <div class="tile"><div class="n">02 — Moat</div><h3>Owned technology</h3><p>Proprietary atmospheric-water systems, monitored and specified — product-grade hardware, not a lab demo.</p></div>
-      <div class="tile"><div class="n">03 — Traction</div><h3>Marquee validation</h3><p>NBA and MLS league firsts, and Southern Glazer's first-ever equity stake in a beverage supplier.</p></div>
-      <div class="tile"><div class="n">04 — Team</div><h3>Proven operators</h3><p>Leadership that scaled Bacardi, Diageo, Red Bull, and Patrón — beverage builders, not first-timers.</p></div>
-    </div>
+    <p class="eyebrow kick">Financial highlights</p>
+    <h2 class="display" style="max-width:22ch;">Unit economics that replicate.</h2>
+    <p class="lede">Projected economics for the South Florida facility — the model for a second site in 2027.</p>
+    <table class="dtable">
+      <caption>South Florida facility economics, management estimates ($ in '000s, except per-L)</caption>
+      <thead><tr><th>Metric</th><th class="num">Low case</th><th class="num em">Base case</th><th class="num">High case</th></tr></thead>
+      <tbody>
+        <tr><td>Production machines</td><td class="num">54</td><td class="num em">54</td><td class="num">54</td></tr>
+        <tr><td>Avg. production / machine (L/day)</td><td class="num">1,800</td><td class="num em">1,900</td><td class="num">2,000</td></tr>
+        <tr><td>Uptime</td><td class="num">80%</td><td class="num em">85%</td><td class="num">90%</td></tr>
+        <tr><td>Annual production (kL)</td><td class="num">28,382</td><td class="num em">31,832</td><td class="num">35,478</td></tr>
+        <tr><td>Revenue / liter</td><td class="num">$2.50</td><td class="num em">$2.63</td><td class="num">$2.75</td></tr>
+        <tr><td>Annual revenue</td><td class="num">$70,956</td><td class="num em">$83,558</td><td class="num">$97,565</td></tr>
+        <tr><td>Gross margin</td><td class="num">48.5%</td><td class="num em">55.4%</td><td class="num">61.7%</td></tr>
+        <tr><td>Facility CAPEX</td><td class="num">$20,000</td><td class="num em">$22,500</td><td class="num">$25,000</td></tr>
+        <tr><td>Facility payback period</td><td class="num">0.58 yrs</td><td class="num em">0.49 yrs</td><td class="num">0.42 yrs</td></tr>
+      </tbody>
+    </table>
+
+    <table class="dtable" style="margin-top:2.8rem;">
+      <caption>Valuation context, public comparables (EV / 2027E)</caption>
+      <thead><tr><th>Comparable set</th><th class="num">EV / Revenue</th><th class="num">EV / EBITDA</th></tr></thead>
+      <tbody>
+        <tr><td>Beverage / bottled water</td><td class="num">3.0x</td><td class="num">11.3x</td></tr>
+        <tr><td>Water infrastructure / technology</td><td class="num">3.4x</td><td class="num">13.2x</td></tr>
+        <tr><td>Recent category exits (mean)</td><td class="num">$3.2B EV</td><td class="num">~$1.2B rev.</td></tr>
+      </tbody>
+    </table>
+    <p class="footnote-src">Projected and illustrative; reflects Air Water management estimates and is not a guarantee of future results. Comps per FactSet, Capital IQ, Dealogic (4/2/2026). Quarterly and annual financial statements will be available following the business combination.</p>
   </div>
 </section>
 
-<!-- filings -->
-<section class="sec" id="filings">
-  <div class="wrap">
-    <p class="eyebrow kick">SEC filings</p>
-    <h2 class="display">Everything, on the record.</h2>
-    <div class="rows">
-      <a class="row" href="#"><span class="dt">F-4</span><span class="tt">Registration statement — business combination</span><span class="ar">SEC.GOV →</span></a>
-      <a class="row" href="#"><span class="dt">8-K</span><span class="tt">PIPE upsized to $96.0M</span><span class="ar">SEC.GOV →</span></a>
-      <a class="row" href="#"><span class="dt">S-1</span><span class="tt">Resale registration</span><span class="ar">SEC.GOV →</span></a>
-      <a class="row" href="#"><span class="dt">425</span><span class="tt">Business combination communications</span><span class="ar">SEC.GOV →</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- news -->
-<section class="sec paper" id="news">
+<!-- news & events -->
+<section class="sec" id="news">
   <div class="wrap">
     <p class="eyebrow kick">News &amp; events</p>
     <h2 class="display">On the record.</h2>
     <div class="rows">
-      <a class="row" href="#"><span class="dt">06 · 2026</span><span class="tt">PIPE upsized to $96.0M ahead of business combination close</span><span class="ar">→</span></a>
-      <a class="row" href="#"><span class="dt">2026</span><span class="tt">AWV and Inflection Point III announce combination at $200M pre-money</span><span class="ar">→</span></a>
-      <a class="row" href="#"><span class="dt">2026</span><span class="tt">A1R named Official Water of the Miami HEAT</span><span class="ar">→</span></a>
+      <div class="row"><span class="dt">06 · 2026</span><span class="tt">PIPE upsized to $96.0M ahead of business combination close</span></div>
+      <div class="row"><span class="dt">2026</span><span class="tt">AWV and Inflection Point Acquisition Corp. III announce combination at $200M pre-money</span></div>
+      <div class="row"><span class="dt">2026</span><span class="tt">A1R named Official Water of the Miami HEAT, the NBA's first air-to-water partnership</span></div>
     </div>
+    <div class="rows" style="margin-top:2.4rem;">
+      <div class="row"><span class="dt">Upcoming</span><span class="tt">Special meeting of Inflection Point shareholders, date to be set in the definitive proxy</span><span class="ar">EVENT</span></div>
+      <div class="row"><span class="dt">Upcoming</span><span class="tt">Investor conference call following transaction close</span><span class="ar">WEBCAST</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- SEC filings -->
+<section class="sec paper" id="filings">
+  <div class="wrap">
+    <p class="eyebrow kick">SEC filings</p>
+    <h2 class="display">Public filings.</h2>
+    <table class="dtable">
+      <thead><tr><th>Form</th><th>Description</th><th class="num">Source</th></tr></thead>
+      <tbody>
+        <tr><td>Form F-4</td><td>Registration statement, incl. proxy statement/prospectus</td><td class="num"><a class="em" href="https://www.sec.gov/Archives/edgar/data/2092314/000121390026042592/ea0266470-04.htm" target="_blank" rel="noopener">View on EDGAR →</a></td></tr>
+        <tr><td>All filings</td><td>Inflection Point Acquisition Corp. III · CIK 0002092314</td><td class="num"><a class="em" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0002092314&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">SEC EDGAR →</a></td></tr>
+      </tbody>
+    </table>
+    <p class="footnote-src">Complete filing history is available free of charge via the SEC's EDGAR system at sec.gov.</p>
   </div>
 </section>
 
 <!-- governance -->
 <section class="sec" id="governance">
   <div class="wrap">
-    <p class="eyebrow kick">Governance</p>
-    <h2 class="display">Experience at the table.</h2>
-    <p class="lede">Industry depth across beverage, consumer, and capital markets — anchored by Inflection Point and Southern Glazer's.</p>
+    <p class="eyebrow kick">Leadership &amp; governance</p>
+    <h2 class="display">Leadership and board.</h2>
+    <p class="lede">Operators who have scaled premium beverage, governed by a board with deep consumer and capital-markets experience.</p>
+    <h3 class="sans-h subhead">Executive team</h3>
+    <div class="people">
+      <div class="person"><div class="pic"><img src="carr.jpg" alt="Pete Carr"></div><div class="pad"><h3>Pete Carr</h3><div class="role">Chief Executive Officer</div><p>35 years across Bacardi, Diageo, Glazer's, Red Bull.</p></div></div>
+      <div class="person"><div class="pic"><img src="bibbo.jpg" alt="Ryan Bibbo"></div><div class="pad"><h3>Ryan Bibbo</h3><div class="role">Chief Operating Officer</div><p>25 years in operations and organizational management.</p></div></div>
+      <div class="person"><div class="pic"><img src="tuerff.jpg" alt="David Tuerff"></div><div class="pad"><h3>David Tuerff</h3><div class="role">Chief Financial Officer</div><p>15 years in public-company finance; $3B+ financing.</p></div></div>
+    </div>
+    <h3 class="sans-h subhead">Board of directors</h3>
     <div class="cards c4">
-      <div class="card"><div class="k">CEO, Air Water</div><div class="v" style="font-size:1.5rem;">Pete Carr</div></div>
-      <div class="card"><div class="k">Inflection Point</div><div class="v" style="font-size:1.5rem;">Mike Blitzer</div></div>
-      <div class="card"><div class="k">Inflection Point</div><div class="v" style="font-size:1.5rem;">Kevin Shannon</div></div>
-      <div class="card"><div class="k">Mubadala</div><div class="v" style="font-size:1.5rem;">Matthew Hurn</div></div>
+      <div class="card"><div class="k">Chief Executive Officer</div><div class="v tx">Pete Carr</div><div class="d">Air Water Ventures</div></div>
+      <div class="card"><div class="k">Founding Partner</div><div class="v tx">Mike Blitzer</div><div class="d">Inflection Point</div></div>
+      <div class="card"><div class="k">Founding Partner</div><div class="v tx">Kevin Shannon</div><div class="d">Inflection Point</div></div>
+      <div class="card"><div class="k">General Partner</div><div class="v tx">Andrea Mollica</div><div class="d">Tau Capital</div></div>
+      <div class="card"><div class="k">EVP &amp; Managing Director</div><div class="v tx">Jennifer Chaplin Tolkin</div><div class="d">Campari</div></div>
+      <div class="card"><div class="k">Founder</div><div class="v tx">Peter McDonough</div><div class="d">McDonough Advisory</div></div>
+      <div class="card"><div class="k">Executive Director</div><div class="v tx">Matthew Hurn</div><div class="d">Mubadala</div></div>
     </div>
-    <div class="rows" style="margin-top:2.4rem;">
-      <a class="row" href="#"><span class="dt">Charter</span><span class="tt">Audit, Compensation &amp; Nominating committee charters</span><span class="ar">PDF →</span></a>
-      <a class="row" href="#"><span class="dt">Conduct</span><span class="tt">Code of Business Conduct &amp; Ethics</span><span class="ar">PDF →</span></a>
-    </div>
+    <p class="lede" style="font-size:1rem;">Board committees (Audit, Compensation, and Nominating &amp; Governance), committee charters, and the Code of Business Conduct &amp; Ethics will be established and published on SEC EDGAR and this page upon completion of the listing.</p>
   </div>
 </section>
 
@@ -138,22 +236,41 @@
     <p class="eyebrow kick">Resources</p>
     <h2 class="display">For your model.</h2>
     <div class="cards c3">
-      <div class="card royal"><div class="k">Deck</div><div class="v" style="font-size:1.6rem;">Investor presentation</div><div class="d">Latest, Q3 2026 — PDF</div></div>
-      <div class="card"><div class="k">One-pager</div><div class="v" style="font-size:1.6rem;">Fact sheet</div><div class="d">Company &amp; transaction at a glance</div></div>
-      <div class="card"><div class="k">Filings</div><div class="v" style="font-size:1.6rem;">SEC / EDGAR</div><div class="d">Full filing history</div></div>
+      <div class="card royal"><div class="k">Deck</div><div class="v tx">Investor presentation</div><div class="d"><a href="https://a1rwater.com/wp-content/uploads/2026/06/a1rwater-investor-deck-260609.pdf" target="_blank" rel="noopener">June 2026 · download PDF →</a></div></div>
+      <div class="card"><div class="k">Filings</div><div class="v tx">SEC / EDGAR</div><div class="d"><a href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0002092314&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">View filings →</a></div></div>
+      <div class="card"><div class="k">ESG</div><div class="v tx">Sustainability</div><div class="d"><a href="awv-company.html#sustainability">How the model works →</a></div></div>
     </div>
+
+    <h3 class="sans-h subhead">Investor FAQs</h3>
+    <div class="faq">
+      <details><summary>What will Air Water Ventures trade as?</summary><p>Upon completion of the business combination, the company is expected to list on Nasdaq under the ticker <b>AWVE</b>. Until then, the security trades as Inflection Point Acquisition Corp. III.</p></details>
+      <details><summary>How is the transaction structured?</summary><p>A business combination (de-SPAC) with Inflection Point Acquisition Corp. III at a $200M pre-money equity value, with $96.0M of committed PIPE capital and a pro forma enterprise value of $339.5M (assuming 0% redemptions).</p></details>
+      <details><summary>When is the transaction expected to close?</summary><p>Closing is subject to shareholder and regulatory approvals and customary conditions. Timing will be set in the definitive proxy statement/prospectus filed with the SEC.</p></details>
+      <details><summary>How much capital has been committed, and from whom?</summary><p>$96.0M in PIPE capital, anchored by Inflection Point and Southern Glazer's, with $50.0M funded at announcement and $46.0M at close.</p></details>
+      <details><summary>Where can I find official documents?</summary><p>All filings are available free of charge via the SEC's EDGAR system at sec.gov, and are linked in the SEC Filings section above.</p></details>
+      <details><summary>Who are the transaction advisors?</summary><p>Cantor Fitzgerald &amp; Co. is acting as placement agent for the PIPE in connection with the business combination.</p></details>
+    </div>
+
+    <h3 class="sans-h subhead">Information request</h3>
+    <form class="formgrid" onsubmit="return false;">
+      <input type="text" placeholder="Name" aria-label="Name">
+      <input type="text" placeholder="Firm" aria-label="Firm">
+      <input type="email" class="full" placeholder="Email" aria-label="Email">
+      <textarea class="full" rows="3" placeholder="How can investor relations help?" aria-label="Message"></textarea>
+      <div class="full"><button class="btn btn-royal" type="submit">Submit request</button></div>
+    </form>
   </div>
 </section>
 
-<!-- alerts -->
+<!-- email alerts -->
 <section class="sec royal gateway" id="alerts">
-  <svg class="ripplefx" viewBox="0 0 600 600" aria-hidden="true"><g fill="none" stroke="#fff"><circle cx="300" cy="300" r="46" stroke-opacity=".4"/><circle cx="300" cy="300" r="104" stroke-opacity=".28"/><circle cx="300" cy="300" r="168" stroke-opacity=".18"/><circle cx="300" cy="300" r="238" stroke-opacity=".12"/><circle cx="300" cy="300" r="312" stroke-opacity=".07"/><circle cx="300" cy="300" r="392" stroke-opacity=".04"/></g></svg>
   <div class="wrap">
-    <h2 class="display">Never miss a filing.</h2>
-    <p class="lede" style="margin-left:auto;margin-right:auto;color:rgba(255,255,255,.9);">Get news, events, and SEC filings the moment they post.</p>
-    <div class="alert" style="margin-left:auto;margin-right:auto;justify-content:center;">
+    <p class="eyebrow kick">Stay informed</p>
+    <h2 class="display">Email alerts.</h2>
+    <p class="lede">News, events, and SEC filings, the moment they post.</p>
+    <div class="alert">
       <input type="email" placeholder="you@firm.com" aria-label="Email address">
-      <a class="btn btn-white" href="#">Subscribe</a>
+      <button class="btn btn-white" type="button">Subscribe</button>
     </div>
   </div>
 </section>
@@ -163,29 +280,45 @@
   <div class="wrap">
     <p class="eyebrow kick">Investor contact</p>
     <h2 class="display">Talk to us.</h2>
-    <div class="cards c2">
-      <div class="card"><div class="k">Investor relations</div><div class="v" style="font-size:1.5rem;"><a href="mailto:ir@a1rwater.com">ir@a1rwater.com</a></div></div>
-      <div class="card"><div class="k">Media</div><div class="v" style="font-size:1.5rem;"><a href="mailto:info@a1rwater.com?subject=Media%20inquiry">info@a1rwater.com</a></div></div>
+    <div class="cards c3">
+      <div class="card"><div class="k">Investor relations</div><div class="v tx">ir@a1rwater.com</div></div>
+      <div class="card"><div class="k">Media &amp; careers</div><div class="v tx">info@a1rwater.com</div></div>
+      <div class="card"><div class="k">Transaction documents</div><div class="v tx">Inflection Point III</div><div class="d">167 Madison Ave, Suite 205 #1017, New York, NY 10016</div></div>
     </div>
   </div>
 </section>
 
 <footer>
   <div class="wrap">
-    <div class="foot-grid">
+    <div class="foot-grid four">
       <div>
-        <div class="wm"><svg viewBox="0 0 48 56"><path d="M19 4C19 4 8 22 8 33a11 11 0 0 0 22 0C30 22 19 4 19 4Z" fill="none" stroke="#fff" stroke-width="2.4"/><path d="M32 12C32 12 23 27 23 35a9 9 0 0 0 18 0C41 27 32 12 32 12Z" fill="none" stroke="#fff" stroke-width="2.4"/></svg> AWV</div>
+        <div class="wm"><img class="footlogo" src="logo-long.svg" alt="Air Water Ventures"></div>
         <p>4341 W. 108th St., Suite 1<br>Hialeah, FL 33018</p>
-        <p><a href="mailto:ir@a1rwater.com">ir@a1rwater.com</a></p>
       </div>
-      <div><h4>Company</h4><a href="awv-company.html#mission">Mission &amp; vision</a><a href="awv-company.html#values">Values</a><a href="awv-company.html#story">Our story</a><a href="awv-company.html#technology">Technology</a><a href="awv-company.html#sustainability">Sustainability</a></div>
-      <div><h4>Investors &amp; press</h4><a href="#top">IR overview</a><a href="#filings">SEC filings</a><a href="#governance">Governance</a><a href="#news">Newsroom</a><a href="mailto:info@a1rwater.com?subject=Media%20inquiry">Media contact</a></div>
-      <div><h4>Products &amp; more</h4><a href="https://a1rwater.com" target="_blank" rel="noopener">A1R — bottled &amp; canned ↗</a><a href="mailto:info@a1rwater.com?subject=Careers">Careers</a><a href="https://www.linkedin.com/company/a1rwater/" target="_blank" rel="noopener">LinkedIn ↗</a></div>
+      <div><h4>Explore</h4><a href="awv-company.html">Our Company</a><a href="https://a1rwater.com" target="_blank" rel="noopener">Products (A1R)</a><a href="awv-ir.html">Investor Relations</a></div>
+      <div><h4>Legal</h4><a href="https://a1rwater.com/privacy-policy/" target="_blank" rel="noopener">Privacy policy</a><a href="https://a1rwater.com/terms-of-use/" target="_blank" rel="noopener">Terms &amp; conditions</a></div>
+      <div><h4>Contact</h4><span class="email">ir@a1rwater.com</span><span class="email">info@a1rwater.com</span><p>Investors / general &amp; media</p></div>
     </div>
-    <p class="legal">FORWARD-LOOKING STATEMENTS — Certain statements are forward-looking and involve risks and uncertainties. All transaction figures illustrative and pre-close; Nasdaq listing subject to approval. Stock data illustrative. This page is not an offer to sell or a solicitation to buy securities. See SEC filings at sec.gov.</p>
-    <div class="foot-bottom"><span>© 2026 Air Water Ventures</span><span>Privacy · Terms · Contact · Site map</span></div>
+    <div class="fineprint">
+      <p>FORWARD-LOOKING STATEMENTS: Certain statements herein are forward-looking and involve risks and uncertainties. Words such as "estimate," "project," "forecast," "intend," "expect," "anticipate," "believe," and similar expressions identify forward-looking statements. These statements are based on management's current expectations and are not guarantees of future performance; actual results may differ materially. All transaction figures are illustrative, assume 0% redemptions, and pre-date close. The Nasdaq listing is subject to approval and is not assured. Projected financial information reflects Air Water management estimates, is unaudited, does not conform to Regulation S-X, and is for illustrative purposes only.</p>
+      <p>NO OFFER OR SOLICITATION: This page does not constitute an offer to sell, or the solicitation of an offer to buy, any securities, nor a solicitation of any vote or approval. In connection with the business combination, a registration statement on Form F-4 has been filed with the SEC. INVESTORS AND SECURITY HOLDERS ARE URGED TO READ THE F-4 AND ALL RELEVANT DOCUMENTS FILED WITH THE SEC CAREFULLY AND IN THEIR ENTIRETY, available free of charge at sec.gov. Market and industry data are sourced from third parties and have not been independently verified. [PROTOTYPE · COPY SUBJECT TO LEGAL REVIEW]</p>
+    </div>
+    <div class="foot-bottom"><span>© 2026 Air Water Ventures</span><span>Privacy · Terms · Contact</span></div>
   </div>
 </footer>
+
+<script>
+(function(){
+  var d=document.getElementById('drawer'),o=document.querySelector('.menu-btn'),c=d&&d.querySelector('.close');
+  if(!d||!o)return;
+  function open(){d.classList.add('open');o.setAttribute('aria-expanded','true');if(c)c.focus();}
+  function close(){d.classList.remove('open');o.setAttribute('aria-expanded','false');o.focus();}
+  o.addEventListener('click',open);
+  if(c)c.addEventListener('click',close);
+  d.querySelectorAll('a').forEach(function(a){a.addEventListener('click',close);});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&d.classList.contains('open'))close();});
+})();
+</script>
 
 </body>
 </html>
