@@ -1,7 +1,7 @@
 /* =====================================================================
    AIR WATER VENTURES — "BLUE CHIP" (refined go-forward direction)
    Navy + Electric Royal + Signal-red bleed · white editorial sections
-   Type : Instrument Serif (wordmark + display) · Spline Sans (headings/body)
+   Type : Playfair Display (display serif — the company font) · Spline Sans (headings/body)
           Spline Sans Mono (labels / data voice)
    ===================================================================== */
 :root{
@@ -14,7 +14,7 @@
   --line:rgba(17,19,26,.12); --line-2:rgba(17,19,26,.07);
   --line-d:rgba(255,255,255,.16); --line-d2:rgba(255,255,255,.08);
   --up:#1FBE7A;
-  --serif:'Instrument Serif',Georgia,serif;
+  --serif:'Playfair Display',Georgia,serif;
   --sans:'Spline Sans',-apple-system,BlinkMacSystemFont,sans-serif;
   --mono:'Spline Sans Mono',ui-monospace,monospace;
   --radius:22px; --shadow:0 16px 40px rgba(10,11,61,.10);
@@ -291,7 +291,7 @@ footer .wrap{padding:6vh 0 4vh;}
 .hero-el .wrap{position:relative;z-index:2;width:100%;}
 .hero-el-grid{display:grid;grid-template-columns:1.2fr .8fr;gap:2rem;align-items:center;}
 @media(max-width:860px){.hero-el-grid{grid-template-columns:1fr;}}
-.statement-h1{font-family:var(--sans);font-weight:300;text-transform:uppercase;font-size:clamp(2.2rem,5vw,4.4rem);line-height:1.04;letter-spacing:.012em;color:#fff;max-width:14ch;}
+.statement-h1{font-family:var(--serif);font-weight:500;font-size:clamp(2.6rem,5.6vw,5rem);line-height:1.06;letter-spacing:-.01em;color:#fff;max-width:16ch;}
 .hero-el .stockcard{box-shadow:0 30px 70px rgba(0,0,0,.45);}
 /* floating frosted presentation card overhanging hero bottom */
 .deckfloat{position:relative;z-index:5;margin-top:-4.5rem;margin-bottom:.5rem;}
