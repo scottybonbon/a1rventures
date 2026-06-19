@@ -383,6 +383,10 @@ footer .wrap{padding:6vh 0 4vh;}
 /* plain copy-paste contact email shown in editorial sections */
 .mailline{font-family:var(--mono);font-size:1rem;letter-spacing:.02em;color:var(--royal);margin-top:1.6rem;}
 
+/* verbatim, board-approved mission / vision statements (serif, elegant, readable) */
+.mv-statement{font-family:var(--serif);font-weight:400;font-size:clamp(1.25rem,2vw,1.6rem);line-height:1.45;color:var(--ink);max-width:38rem;}
+.navy .mv-statement,.royal .mv-statement{color:#fff;}
+
 /* =====================================================================
    ACCESSIBILITY + UX HARDENING (dev / QA / a11y pass)
    ===================================================================== */
