@@ -10,12 +10,13 @@
 <link rel="stylesheet" href="awv-bluechip.css">
 </head>
 <body>
+<a class="skip-link" href="#main-content">Skip to content</a>
 
-<nav>
+<nav aria-label="Primary">
   <div class="wrap nav-inner">
     <a class="brand" href="index.html" aria-label="Air Water Ventures">
       <img class="brandlogo brandlogo-d" src="logo-long.svg" alt="Air Water Ventures">
-      <img class="brandlogo brandlogo-m" src="logo-mobile.png" alt="AWV">
+      <img class="brandlogo brandlogo-m" src="whitedrps.svg" alt="Air Water Ventures">
     </a>
     <div class="nav-links">
       <div class="nav-item">
@@ -31,7 +32,7 @@
         </div>
       </div>
       <a href="https://a1rwater.com" target="_blank" rel="noopener">Products</a>
-      <a class="nav-cta active" href="awv-ir.html">Investor Relations</a>
+      <a class="nav-cta active" aria-current="page" href="awv-ir.html">Investor Relations</a>
     </div>
     <button class="menu-btn" aria-label="Open menu" aria-expanded="false" aria-controls="drawer">Menu</button>
   </div>
@@ -44,6 +45,7 @@
 </div>
 
 <!-- elevated IR hero with stock card -->
+<main id="main-content" tabindex="-1">
 <header class="hero-el hero-ir" id="top">
   <div class="wrap">
     <div class="hero-el-grid">
@@ -62,7 +64,7 @@
 </header>
 
 <!-- IR sub-nav -->
-<div class="subnav">
+<nav class="subnav" aria-label="Investor relations sections">
   <div class="wrap">
     <span class="lbl">Investor Relations</span>
     <a href="#stock">Overview</a>
@@ -73,11 +75,12 @@
     <a href="#resources">Resources</a>
     <a href="#contact">Contact</a>
   </div>
-</div>
+</nav>
 
 <!-- key figures -->
 <section class="sec paper" id="stock">
   <div class="wrap">
+    <h2 class="sr-only">Key figures</h2>
     <p class="eyebrow kick">Key figures</p>
     <div class="figrow">
       <div><div class="fv"><span class="u">$</span>200<span class="u">M</span></div><div class="fk">Pre-money equity value</div></div>
@@ -102,7 +105,7 @@
     <p class="lede">Projected economics for the South Florida facility — the model for a second site in 2027.</p>
     <table class="dtable">
       <caption>South Florida facility economics, management estimates ($ in '000s, except per-L)</caption>
-      <thead><tr><th>Metric</th><th class="num">Low case</th><th class="num em">Base case</th><th class="num">High case</th></tr></thead>
+      <thead><tr><th scope="col">Metric</th><th class="num" scope="col">Low case</th><th class="num em" scope="col">Base case</th><th class="num" scope="col">High case</th></tr></thead>
       <tbody>
         <tr><td>Production machines</td><td class="num">54</td><td class="num em">54</td><td class="num">54</td></tr>
         <tr><td>Avg. production / machine (L/day)</td><td class="num">1,800</td><td class="num em">1,900</td><td class="num">2,000</td></tr>
@@ -118,7 +121,7 @@
 
     <table class="dtable" style="margin-top:2.8rem;">
       <caption>Valuation context, public comparables (EV / 2027E)</caption>
-      <thead><tr><th>Comparable set</th><th class="num">EV / Revenue</th><th class="num">EV / EBITDA</th></tr></thead>
+      <thead><tr><th scope="col">Comparable set</th><th class="num" scope="col">EV / Revenue</th><th class="num" scope="col">EV / EBITDA</th></tr></thead>
       <tbody>
         <tr><td>Beverage / bottled water</td><td class="num">3.0x</td><td class="num">11.3x</td></tr>
         <tr><td>Water infrastructure / technology</td><td class="num">3.4x</td><td class="num">13.2x</td></tr>
@@ -152,7 +155,7 @@
     <p class="eyebrow kick">SEC filings</p>
     <h2 class="display">Public filings.</h2>
     <table class="dtable">
-      <thead><tr><th>Form</th><th>Description</th><th class="num">Source</th></tr></thead>
+      <thead><tr><th scope="col">Form</th><th scope="col">Description</th><th class="num" scope="col">Source</th></tr></thead>
       <tbody>
         <tr><td>Form F-4</td><td>Registration statement, incl. proxy statement/prospectus</td><td class="num"><a class="em" href="https://www.sec.gov/Archives/edgar/data/2092314/000121390026042592/ea0266470-04.htm" target="_blank" rel="noopener">View on EDGAR →</a></td></tr>
         <tr><td>All filings</td><td>Inflection Point Acquisition Corp. III · CIK 0002092314</td><td class="num"><a class="em" href="https://www.sec.gov/cgi-bin/browse-edgar?action=getcompany&amp;CIK=0002092314&amp;type=&amp;dateb=&amp;owner=include&amp;count=40" target="_blank" rel="noopener">SEC EDGAR →</a></td></tr>
@@ -246,6 +249,7 @@
   </div>
 </section>
 
+</main>
 <footer>
   <div class="wrap">
     <div class="foot-grid four">
